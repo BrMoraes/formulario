@@ -1,0 +1,107 @@
+<html>
+  <meta charset="UTF8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <title>Formulario Treino</title>
+
+  <body>
+   <div class="titulo">
+      <h1>Cadastro de Clientes</h1>
+
+      <h2>Preencha o Formulário:</h2>
+   </div>
+    <form action="login.html" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="country" value="BR" />
+      <div class="conjunto">
+      <fieldset class="firstblock">
+        <legend>Informações Pessoais</legend>
+        <div class="infopessoais">
+          <label>
+            Foto do Perfil:
+            <input type="file" name="perfilpicture" accept="image/*" required />
+          </label>
+          <label>
+            Nome Completo:
+            <input type="text" name="name" required minlength="2" placeholder="Nome Completo"/>
+          </label>
+          <label>
+            CPF:
+            <input
+              type="number"
+              name="cpf"
+              minlength="11"
+              required
+            />
+          </label>
+          <label>
+            E-mail:
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Confirmar e-mail:
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Data de Nascimento
+            <input type="number" name="birthdate" required />
+          </label>
+        </div>
+      </fieldset>
+      <fieldset>
+         <legend>Endereço</legend>
+         <div class="adress">
+          <label>
+            Logradouro:
+            <input type="text" name="adress" id="adress" />
+          </label>
+
+          <label>
+            Nº:
+            <input type="number" name="numberadress" id="numberadress" />
+          </label>
+
+          <label>
+            Cidade:
+            <input type="text" name="city" id="city" />
+          </label>
+          <label>
+            UF:
+            <select name="estado" class="uf">
+              <option></option>
+              <option value="7">AL</option>
+              <option value="6">BA</option>
+              <option value="3">PB</option>
+              <option value="2">PE</option>
+              <option value="4">RN</option>
+              <option value="5">SE</option>
+            </select>
+          </label>
+        </div>
+      </fieldset>
+    </div>
+    <label class="specialatendiment">
+       <h3>Necessita de atendimento especial?</h3> </br>
+       <div class="optionsatendiment">
+         <div class="optionsatendiment1">
+            <input type="radio" id="yes" name="atendiment" value="specialatendiment">
+            <label for="yes">SIM</label>
+         </div>
+         <div class="optionsatendiment2">
+            <input type="radio" id="no" name="atendiment" value="specialatendiment2">
+            <label for="no">NÃO</label>
+         </div>
+       </div>
+    </label>
+    <label class="obs">
+      Observações:
+      <textarea name="description"></textarea>
+    </label>
+
+    <div class="bottons">
+       <input type="reset" value="Limpar" name="clear" />
+       <input type="submit" value="Cadastrar" name="send" />
+    </label>
+    </form>
+  </body>
+</html>
